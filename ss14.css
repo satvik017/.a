@@ -1,0 +1,44 @@
+body{
+    background-image: url('Image/i15.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.item{
+    display: block;
+    position: fixed;
+    margin: 0px auto;
+
+}
+p{ margin-left: 4vw;
+    font-size: 23px;
+    padding: 0px;
+    margin: 4vw 5vw
+}
+h4{
+    margin-left: 3vw;
+    font-size: 37px;
+    padding: 0px;
+    margin: 4vw 5vw
+}
+button{
+    background-color: white;
+    border-radius: 100%;
+}
+.item1{
+    display: flex;
+    position: fixed;
+
+}
+.s1{
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+
+}
+#t1{
+    width: 4vw;
+    height: 5vw;
+    border-radius: 100%
+}
