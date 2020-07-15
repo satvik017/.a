@@ -80,7 +80,8 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 @media(max-width: 420px){
    body{
-      background-size: contain;
+      background-size: cover;
+      background-repeat: repeat;
   .a1{
     top: 29vw;
   }
