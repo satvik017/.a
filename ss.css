@@ -81,7 +81,8 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 @media(max-width: 550px){
    body{
 Background-image:url('Image/i16.jpg');
-      background-size: cover;
+      background-size: contain;
+      width:500px; height: 1000px;
    
        background- attachment:fixed;
 }
@@ -103,7 +104,7 @@ Background-image:url('Image/i16.jpg');
     width: 60px;
   }
   .item1{
-    top: 155vw;
+    top: 80vw;
     left: 10vw;
   }
 }
