@@ -50,6 +50,9 @@ button{
 }
 
 @media (max-width: 500px){
+    body{
+        background-repeat: repeat;
+    }
     .box2{
         display: grid;
         grid-template-columns: 1fr 1fr;
