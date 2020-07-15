@@ -78,7 +78,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .b1:hover{
   text-shadow: 7px 8px 10px rgb(0, 0, 0);
 }
-@media(max-width: 350px){
+@media(max-width: 420px){
+   body{
+      background-size: contain;
   .a1{
     top: 29vw;
   }
