@@ -6,9 +6,10 @@ body{
     background-position: center center;
 }
 .item{
-    display: block;
+    display: flex;
     position: fixed;
-    margin: 0px auto;
+justify-content: center;
+    align-item: center;
 
 }
 p{ margin-left: 4vw;
