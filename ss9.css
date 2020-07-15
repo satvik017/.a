@@ -7,7 +7,7 @@ body{
     
 }
 .box{
-    display: block;
+    display: inline-block;
     margin:0px auto;
 }
 .a1{
