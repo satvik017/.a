@@ -81,3 +81,11 @@ button{
     height: 5vw;
     border-radius: 100%
 }
+@media(max-width: 700px){
+Body{
+Background-repeat:repeat-y;
+Background-size: cover;
+Width:500px; height:800px;
+Background-position: top center;
+}
+}
