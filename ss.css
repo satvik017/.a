@@ -49,9 +49,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .icon1{
-  position: ficed;
-  top: 70vw;
-  left: 50vw;
+  position: fixed;
+  top: 35vw;
+  left: 70vw;
   height: 12vw;
   width: 12vw;
   margin:auto;
