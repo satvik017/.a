@@ -113,5 +113,12 @@ body{
 	    top: 140vw;
 	    left: 10vw;
 	  }
-	}
+	  }
+        @media(0rientation:portrait){
+       icon1{
+       top: 5vw;
+       height: 70px;
+       width: 60px;
+    
+       }
 
