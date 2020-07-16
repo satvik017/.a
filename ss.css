@@ -1,7 +1,7 @@
 
    
 body{
-  background-image: url('Image/i12.png');
+  background-image: url('Image/i16.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -85,7 +85,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    body{
 Background-image:url('Image/i16.jpg');
       background-size: cover;
-      width:500px; height: 800px;
+      width:500px; height: 900px;
    
        background- attachment:fixed;
 Background-position:top center;
