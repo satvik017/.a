@@ -1,62 +1,29 @@
-
-   
 body{
   background-image: url('Image/i12.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-   margin-left:auto;
-   margin-right:auto;   
+
 }
 .box1{
   display: flex;
   align-items: center;
   justify-content: center;
 
-}
-.a1{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- position: fixed;
-  left: 25vw;
-  top: 3vw;
-  font-size: 18vw;
-  color: white;
-}
-.a2{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-position: fixed;
-left: 31vw;
-top: 3vw;
-  font-size: 18vw;
-  color: white;
-}
-.a3{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-position: fixed;
-left: 60vw;
-top: 1vw;
-  font-size: 20vw;
-  color: white;
-}
-.a4{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- position: fixed;
- left: 63vw;
- top: 21vw;
-    font-size: 4vw;
-    color: white;
+
 }
 
 .icon1{
   position: fixed;
-  top: 25vw;
-  left: 50vw;
+  top: 59%;
+  left: 50%;
   height: 12vw;
   width: 12vw;
-  margin:auto;
   border-radius: 100%;
-  box-shadow: 5px 5px 6px rgb(19,18,18);
+    transform:translate(40%,55)
+  box-shadow: 5px 5px 6px rgb(19, 18, 18);
+    
 }
 .icon1:hover{
   cursor: pointer;
@@ -65,33 +32,26 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .item1{
   position: fixed;
-  margin: auto;
+  margin: 1vw;
   padding: 4vw;
-  left: 35%;
+  left: 25%;
   top: 70%;
+  transform:translate(-25%,-50%)
   text-align:centre;
 }
 .b1{
   display: inline;
   padding: 2vw;
   color: white;
-  font-size: 23px;
+  font-size: 20px;
 
 }
 .b1:hover{
   text-shadow: 7px 8px 10px rgb(0, 0, 0);
 }
-@media(max-width: 480px){
-   body{
-Background-image:url('Image/i16.jpg');
-      background-size: cover;
-      width:500px; height: 900px;
-   
-       background- attachment:fixed;
-Background-position:top center;
-}
+@media all and (min-width: 699px) and (min-width: 520px), (min-width: 1151px)(max-width: 1000px) and (max-width: 700px)({
   .a1{
-    top: 29vw;
+    top: 89vw;
   }
   .a2{
     top: 29vw;
@@ -100,15 +60,38 @@ Background-position:top center;
     top: 26vw;
   }
   .a4{
-    top: 48vw
+    top: 50vw
   }
-  .icon1{
-    top: 101vw;
+  
+ 
+}
+
+
+@media (max-width:640px)
+.icon1{
+    top: 5vw;
     height: 70px;
     width: 60px;
   }
-  .item1{
-    top: 140vw;
-    left: 10vw;
+@media (max-width:640px),(min-width:351px)
+     .item1{
+    top: 50%;
+    left: 50%;
   }
+@media(orientation:landscape){
+
+.icon1{
+top: 5vw;
+height: 70px;
+width: 60px;
+    height: 12vw;
+    
+    }
+}
+@media(0rientation:portrait){
+    icon1{
+top: 5vw;
+height: 70px;
+width: 60px;
+    
 }
