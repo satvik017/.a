@@ -81,7 +81,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .b1:hover{
   text-shadow: 7px 8px 10px rgb(0, 0, 0);
 }
-@media(min-width: 700px){
+@media(mix-width: 480px){
    body{
 Background-image:url('Image/i16.jpg');
       background-size: contain;
