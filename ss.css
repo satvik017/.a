@@ -50,8 +50,8 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .icon1{
   position: fixed;
-  top: 40vw;
-  left: 42w;
+  top: 50%;
+  left: 50%;
   height: 12vw;
   width: 12vw;
   border-radius: 100%;
@@ -68,7 +68,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 4vw;
   left: 35%;
   top: 70%;
-  transform:translate(-35%,-70%)
   text-align:centre;
 }
 .b1{
