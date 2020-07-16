@@ -1,32 +1,33 @@
-body{
-	  background-image: url('Image/i12.png');
-	  background-size: contain;
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;
-	  background-position: center center;
-	   margin-left:auto;
-	   margin-right:auto;   
-	}
-	.box1{
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	
 
-	}
-	.a1{
+   
+body{
+  background-image: url('Image/i12.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+
+}
+.box1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.a1{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	 position: fixed;
 	  left: 25vw;
-	  top: 3vw;
+	  top: 40vw;
 	  font-size: 18vw;
 	  color: white;
+    
 	}
 	.a2{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: fixed;
 	left: 31vw;
-	top: 3vw;
+	top: 40vw;
 	  font-size: 18vw;
 	  color: white;
 	}
@@ -34,7 +35,7 @@ body{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: fixed;
 	left: 60vw;
-	top: 1vw;
+	top: 38vw;
 	  font-size: 20vw;
 	  color: white;
 	}
@@ -42,83 +43,150 @@ body{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	 position: fixed;
 	 left: 63vw;
-	 top: 21vw;
+	 top: 59vw;
 	    font-size: 4vw;
 	    color: white;
 	}
-	
 
-	.icon1{
-	  position: fixed;
-	  top: 25vw;
-	  left: 50vw;
-	  height: 12vw;
-	  width: 12vw;
-	  margin:auto;
-	  border-radius: 100%;
-	  box-shadow: 5px 5px 6px rgb(19,18,18);
-	}
-	.icon1:hover{
-	  cursor: pointer;
-	  
-	}
-	
-
-	.item1{
-	  position: fixed;
-	  margin: auto;
-	  padding: 4vw;
-	  left: 35%;
-	  top: 70%;
-	  text-align:centre;
-	}
-	.b1{
-	  display: inline;
-	  padding: 2vw;
-	  color: white;
-	  font-size: 23px;
-	
-
-	}
-	.b1:hover{
-	  text-shadow: 7px 8px 10px rgb(0, 0, 0);
-	}
-	@media(max-width: 480px){
-	   body{
-	Background-image:url('Image/i16.jpg');
-	      background-size: cover;
-	      width:500px; height: 900px;
-	   
-	       background- attachment:fixed;
-	Background-position:top center;
-	}
-	  .a1{
-	    top: 29vw;
-	  }
-	  .a2{
-	    top: 29vw;
-	  }
-	  .a3{
-	    top: 26vw;
-	  }
-	  .a4{
-	    top: 48vw
-	  }
-	  .icon1{
-	    top: 101vw;
-	    height: 70px;
-	    width: 60px;
-	  }
-	  .item1{
-	    top: 140vw;
-	    left: 10vw;
-	  }
-	  }
-        @media(0rientation:portrait){
-       icon1{
-       top: 5vw;
-       height: 70px;
-       width: 60px;
+.icon1{
+  position: fixed;
+  top: 59%;
+  left: 50%;
+  height: 12vw;
+  width: 12vw;
+  border-radius: 100%;
+    transform:translate(40%,55)
+  box-shadow: 5px 5px 6px rgb(19, 18, 18);
     
-       }
+}
+.icon1:hover{
+  cursor: pointer;
+  
+}
 
+.item1{
+  position: fixed;
+  margin: 1vw;
+  padding: 4vw;
+  left: 23%;
+  top: 70%;
+  transform:translate(-25%,-70%)
+  text-align:centre;
+}
+.b1{
+  display: inline;
+  padding: 2vw;
+  color: white;
+  font-size: 20px;
+
+}
+.b1:hover{
+  text-shadow: 7px 8px 10px rgb(0, 0, 0);
+}
+@media only screen and (min-width:601px) and (max-width: 767px)({
+  .a1{
+    top: 20vw;
+      font-size:80px
+  }
+  .a2{
+    top:40vw;
+  }
+  .a3{
+    top: 40vw;
+  }
+  .a4{
+    top: 59vw
+  }
+    @media only screen and (max-width:200px)and(max-width:767px)and(orientation:landscape){
+        
+     .a1{
+    top: 20vw;
+  }
+  .a2{
+    top: 12vw;
+  }
+  .a3{
+    top: 10vw;
+  }
+  .a4{
+    top: 1vw
+        }
+  
+ 
+}
+
+
+@media (max-width:640px)
+.icon1{
+    top: 5vw;
+    height: 70px;
+    width: 60px;
+  }
+@media (max-width:640px),
+     .item1{
+    top: 50%;
+    left: 50%;
+  }
+@media(orientation:landscape){
+
+.icon1{
+top: 5vw;
+height: 70px;
+width: 60px;
+height: 12vw;
+    }
+     .item1{
+    top: 50%;
+    
+    
+    }
+    
+    
+}
+@media(0rientation:portrait){
+    icon1{
+top: 5vw;
+height: 70px;
+width: 60px;
+    
+}
+     .item1{
+    top: 50%;
+    
+    }
+}
+
+
+
+
+@media(0rientation:landscape){
+    .a1{
+    top: 40vw;
+  }
+  .a2{
+    top: 40vw;
+  }
+  .a3{
+    top: 38vw;
+  }
+  .a4{
+    top: 59vw
+  }
+    
+    }
+@media(orientation:portrait){
+     .a1{
+    top: 40vw;
+  }
+  .a2{
+    top: 40vw;
+  }
+  .a3{
+    top: 38vw;
+  }
+  .a4{
+    top: 59vw
+  }
+    
+    
+}
