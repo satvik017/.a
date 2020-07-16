@@ -21,25 +21,6 @@ h4{
     margin-left: 3vw;
     font-size: 37px;
     padding: 0px;
-    margin: 4vw 5vw
+    margin: 4vw 5vw;
 }
-button{
-    background-color: white;
-    border-radius: 100%;
-}
-.item1{
-    display: flex;
-    position: fixed;
 
-}
-.s1{
-    box-sizing: border-box;
-    height: 5vw;
-    width: 5vw;
-
-}
-#t1{
-    width: 4vw;
-    height: 5vw;
-    border-radius: 100%
-}
