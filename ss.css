@@ -49,14 +49,13 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .icon1{
-  position: fixed;
-  top: 47.5%;
-  left: 48.5%;
+  position: absolute;
+  top: 31vw;
+  left: 42w;
   height: 12vw;
   width: 12vw;
   border-radius: 100%;
-  box-shadow: 5px 5px 6px rgb(19, 18, 18);
-   transform:translate(-48.5%,-49.5%)
+  box-shadow: 5px 5px 6px rgb(19,18,18);
 }
 .icon1:hover{
   cursor: pointer;
