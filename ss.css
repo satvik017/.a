@@ -50,12 +50,13 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .icon1{
   position: fixed;
-  top: 31vw;
-  left: 42vw;
+  top: 47.5%;
+  left: 48.5%;
   height: 12vw;
   width: 12vw;
   border-radius: 100%;
   box-shadow: 5px 5px 6px rgb(19, 18, 18);
+   transform:translate(-48.5%,-49.5%)
 }
 .icon1:hover{
   cursor: pointer;
@@ -63,12 +64,13 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .item1{
-  display: flex;
-  position: fixed;
-  margin: 2vw;
+  position: absolute;
+  margin: auto;
   padding: 4vw;
-  left: 26vw;
-  top: 41vw;
+  left: 35%;
+  top: 70%;
+  transform:translate(-35%,-70%)
+  text-align:centre;
 }
 .b1{
   display: inline;
