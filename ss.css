@@ -84,7 +84,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 @media(max-width: 480px){
    body{
 Background-image:url('Image/i16.jpg');
-      background-size: contain;
+      background-size: cover;
       width:500px; height: 1000px;
    
        background- attachment:fixed;
