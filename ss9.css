@@ -201,9 +201,12 @@ body{
     width: 13vw;
     border-radius: 100%;
 }
-@media(max-width: 350px){
+@media(max-width: 700px){
     button{
         height: 20vw;
         width: 20vw;
     }
+.a2{
+Color: white;
+}
  }
