@@ -83,50 +83,12 @@ body{
 .b1:hover{
   text-shadow: 7px 8px 10px rgb(0, 0, 0);
 }
-@media only screen and (min-width:601px) and (max-width: 767px)({
-  .a1{
-    top: 20vw;
-      font-size:80px
-  }
-  .a2{
-    top:40vw;
-  }
-  .a3{
-    top: 40vw;
-  }
-  .a4{
-    top: 59vw
-  }
-    @media only screen and (max-width:200px)and(max-width:767px)and(orientation:landscape){
-        
-     .a1{
-    top: 20vw;
-  }
-  .a2{
-    top: 12vw;
-  }
-  .a3{
-    top: 10vw;
-  }
-  .a4{
-    top: 1vw
-        }
-  
- 
+@media(max-width:700px)
+{Body{
+Width: 500px;
+Height:850px;
+Background-position: top;
 }
-
-
-@media (max-width:640px)
-.icon1{
-    top: 5vw;
-    height: 70px;
-    width: 60px;
-  }
-@media (max-width:640px),
-     .item1{
-    top: 50%;
-    left: 50%;
-  }
 @media(orientation:landscape){
 
 .icon1{
