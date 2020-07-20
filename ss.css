@@ -18,7 +18,7 @@ body{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	 position: fixed;
 	  left: 25vw;
-	  top: 40vw;
+	  top: 1vw;
 	  font-size: 18vw;
 	  color: white;
     
@@ -27,7 +27,7 @@ body{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: fixed;
 	left: 31vw;
-	top: 40vw;
+	top: 1vw;
 	  font-size: 18vw;
 	  color: white;
 	}
@@ -35,7 +35,7 @@ body{
 	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: fixed;
 	left: 60vw;
-	top: 38vw;
+	top: -1vw;
 	  font-size: 20vw;
 	  color: white;
 	}
@@ -43,15 +43,15 @@ body{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	 position: fixed;
 	 left: 63vw;
-	 top: 59vw;
+	 top: 20vw;
 	    font-size: 4vw;
 	    color: white;
 	}
 
 .icon1{
   position: fixed;
-  top: 59%;
-  left: 50%;
+  top: 58%;
+  left: 47%;
   height: 12vw;
   width: 12vw;
   border-radius: 100%;
@@ -68,8 +68,8 @@ body{
   position: fixed;
   margin: 1vw;
   padding: 4vw;
-  left: 23%;
-  top: 70%;
+  left: 36%;
+  top: 73%;
   transform:translate(-25%,-70%)
   text-align:centre;
 }
