@@ -64,10 +64,10 @@ body{
 }
 
 .item1{
+	display:
   position: fixed;
   margin: 1vw;
   padding: 4vw;
-  left: 36%;
   top: 73%;
 }
 .b1{
@@ -88,18 +88,25 @@ Background-position: top;
 }
 .a1{
 Font-size:25vw;
-Left:21vw; }
+Left:23vw;
+top: 25vw;
+}
 .a2{
 Font-size: 25vw;
+top: 25vw;
 }
 .a3{
 Font-size:28vw;
-Left: 72vw;}
+Left: 72vw;
+top:22vw;}
 .a4{
 Font-size:6vw;
 Left:75vw;
-Top: 32vw;}
+Top: 51vw;}
 .icon1{
 Height: 18vw;
 Width: 18vw;}
+.b1{
+	font-size: 30vw;}
 }
+
