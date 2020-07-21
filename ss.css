@@ -71,7 +71,7 @@ body{
 }
 .b1{
 	position: fixed;
-	left: 20vw;
+	left: 17vw;
 top: 83%;
   padding: 2vw;
   color: white;
@@ -83,7 +83,7 @@ top: 83%;
 }
 .b2{
 	position: fixed;
-left: 65vw;
+left: 70vw;
 top: 83%;
   padding: 2vw;
   color: white;
@@ -95,7 +95,7 @@ top: 83%;
   }
 .b3{
 	position: fixed;
-	left: 55vw;
+	left: 60vw;
 top: 83%;
   padding: 2vw;
   color: white;
