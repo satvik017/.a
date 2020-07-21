@@ -89,6 +89,18 @@ Width: 500px;
 Height:850px;
 Background-position: top;
 }
+.a1{
+Font-size:25vw;}
+.a2{
+Font-size: 25vw;}
+.a3{
+Font-size:28vw;}
+.a4{
+Font-size:6vw;}
+.icon1{
+Height: 18vw;
+Width: 18vw;}
+}
 @media(orientation:landscape){
 
 .icon1{
