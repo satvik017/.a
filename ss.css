@@ -64,10 +64,13 @@ body{
 }
 
 .item1{
-	display:
+	display:flex;
+	align-items: center;
+	justify-content: center;
   position: fixed;
   margin: 1vw;
   padding: 4vw;
+	left: 36%;
   top: 73%;
 }
 .b1{
@@ -106,6 +109,8 @@ Top: 51vw;}
 .icon1{
 Height: 18vw;
 Width: 18vw;}
+	.item1{
+		left: 41%;}
 .b1{
 	font-size: 30px;}
 }
