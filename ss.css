@@ -91,16 +91,17 @@ Background-position: top;
 }
 .a1{
 Font-size:25vw;
-Left:22vw; }
+Left:18vw; }
 .a2{
 Font-size: 25vw;
 }
 .a3{
 Font-size:28vw;
-Left: 72vw;}
+Left: 82vw;}
 .a4{
 Font-size:6vw;
-Left:73vw;}
+Left:83vw;
+Top: 30vw;}
 .icon1{
 Height: 18vw;
 Width: 18vw;}
