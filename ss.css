@@ -65,6 +65,9 @@ body{
 }
 
 .item1{
+  Display:flex;
+  Align-item: center;
+  Justify-content:center;
   position: fixed;
   margin: 1vw;
   padding: 4vw;
