@@ -68,7 +68,7 @@ body{
   position: fixed;
   margin: 1vw;
   padding: 4vw;
-  left: 36%;
+  left: 12vw;
   top: 73%;
   transform:translate(-25%,-70%)
   text-align:centre;
@@ -101,7 +101,7 @@ Left: 72vw;}
 .a4{
 Font-size:6vw;
 Left:75vw;
-Top: 34vw;}
+Top: 36vw;}
 .icon1{
 Height: 18vw;
 Width: 18vw;}
