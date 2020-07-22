@@ -6,11 +6,10 @@ body{
     background-position: center center;
 }
 .box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    right: -3vw;
+    display: block;
+    margin: auto;
+    position: fixed;
+    right: 59vw;
     top: 29vw;
 }
 .a1{position: fixed;
@@ -20,19 +19,21 @@ body{
     text-shadow: 10px 11px 10px black;
 }
 .item{
-    display: flex;
-    position:fixed;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-column-gap: 24vw;
     align-items: center;
-    justify-content: center;
+    position: fixed;
+    top: 64%;
+    left: 2%;
 
 }
 .b1{
     box-sizing: border-box;
-    background-color: white;
-    border-radius: 100%;
-    margin: 47vw 10vw;
-    
-
+    background-color: transparent;
+ 
+    height: 20px;
+    width: 20px;
 }
 
 button{
@@ -66,20 +67,36 @@ button{
     border-radius: 100%;
 }
 @media(max-width: 700px){
-Body{
-Background-repeat:repeat-y;
-Background-size: cover;
-Width:500px; height:800px;
-Background-position: top center;
-}
-.box{
-Right:2vw;
-Top: 79vw;}
-.a1{
-Font-size: 15vw;
-}
-.b1{
-Margin-top:107vw;
-Margin-left:20vw
-}
+    body{
+        height: 850px;
+        width: 500px;
+        background-position: top center;
+    }
+    .box{
+        top: 46%;
+    }
+    .a1{
+        font-size: 51px;
+        left: 24%;
+    }
+    #c1{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100%;
+    }
+    #c2{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100%;
+    }
+    #c3{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100%;
+    }
+    #c4{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100%;
+    }
 }
