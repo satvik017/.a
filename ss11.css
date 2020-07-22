@@ -214,9 +214,9 @@ body{
 
 @media(max-width: 700px){
 Body{
-  Background-image: url('Image/i13b.png');
+  Background-image: url('Image/i13b.jpg');
   Height: 900px;
-  Width: 500px;}
+  Width: 410px;}
     button{
         height: 20vw;
         width: 20vw;
