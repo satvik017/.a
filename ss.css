@@ -82,9 +82,9 @@ top: 83%;
   text-shadow: 7px 8px 10px rgb(0, 0, 0);
 }
 .b2{
-	position: fixed;
-left: 70vw;
-top: 83%;
+  position: fixed;
+  left: 70vw;
+  top: 83%;
   padding: 2vw;
   color: white;
   font-size: 30px;
@@ -94,9 +94,9 @@ top: 83%;
 	text-shadow: 7px 8px 10px rgb(0, 0, 0);
   }
 .b3{
-	position: fixed;
-	left: 60vw;
-top: 83%;
+  position: fixed;
+  left: 50vw;
+  top: 83%;
   padding: 2vw;
   color: white;
   font-size: 30px;
