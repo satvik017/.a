@@ -47,7 +47,15 @@ body{
 	    font-size: 4vw;
 	    color: white;
 	}
-
+   @keyframes spin {
+   0% {
+    transform: rotateZ(0);
+   }
+    100% {
+    transform: rotateZ(360deg);
+   }
+  }
+.icon1{animation: spin 10s linear infinite;}
 .icon1{
   position: fixed;
   top: 58%;
