@@ -2,7 +2,7 @@
    
 body{
   background-image: url('Image/i12.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
