@@ -79,6 +79,9 @@ button{
         font-size: 51px;
         left: 24%;
     }
+.item{
+    Grid-column-gap:6px;
+}
     #c1{
         width: 20vw;
         height: 20vw;
