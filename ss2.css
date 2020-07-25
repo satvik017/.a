@@ -80,7 +80,7 @@ button{
         left: 24%;
     }
 .item{
-    Grid-column-gap:20px;
+    Grid-column-gap:22vw;
 }
     #c1{
         width: 20vw;
