@@ -18,14 +18,20 @@ body{
     color: white;
     text-shadow: 10px 11px 10px black;
 }
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 64%;
+    left: 7vw;
+}
 .item{
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 4fr;
     grid-column-gap: 24vw;
     align-items: center;
-    position: fixed;
-    top: 64%;
-    left: 5%;
+   
 
 }
 .b1{
@@ -36,35 +42,29 @@ body{
     width: 20px;
 }
 
-button{
-    position: fixed;
-    border-radius: 100%;
-    box-sizing: border-box;
-    background-color: white;
-    width: 10vw;
-    height: 10vw;
-    box-shadow: 5px 6px 5px black;
-    
-}
 #c1{
     width: 8vw;
     height: 8vw;
     border-radius: 100%;
+     box-shadow: 10px 9px 10px black;
 }
 #c2{
     width: 8vw;
     height: 8vw;
     border-radius: 100%;
+     box-shadow: 10px 9px 10px black;
 }
 #c3{
     width: 8vw;
     height: 8vw;
     border-radius: 100%;
+     box-shadow: 10px 9px 10px black;
 }
 #c4{
     width: 8vw;
     height: 8vw;
     border-radius: 100%;
+     box-shadow: 10px 9px 10px black;
 }
 @media(max-width: 700px){
     body{
