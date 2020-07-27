@@ -20,7 +20,7 @@ h4{
     margin: 4vw 5vw;
     color:white;
 }
-@media(max-width: 700px){
+@media(max-width: 700px,min-width:320px){
 Body{
 Background-repeat:no-repeat;
 Background-size: cover;
