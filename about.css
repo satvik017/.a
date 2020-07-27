@@ -25,6 +25,6 @@ Body{
 Background-repeat:repeat-y;
 Background-size: cover;
 Width:600px; height:900px;
-Background-position: top center;
+Background-position: auto;
 }
 }
