@@ -1,11 +1,10 @@
 body{
-    background-image: url('Image/i15.jpg');
-
+    background-image: url('Image/about.jpg');
 }
 .item{
     display: block;
     position: fixed;
-  Left: 3vw;
+  Left: 5vw;
 
 }
 p{ margin-left: 4vw;
@@ -28,5 +27,10 @@ Background-size: cover;
 Background-position: auto;
 width: 4vw;
 height: 5vw;    
+}
+.item{
+    display: block;
+    position: fixed;
+  right: 5vw;
 }
 }
