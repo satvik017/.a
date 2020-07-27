@@ -1,0 +1,30 @@
+body{
+    background-image: url('Image/i15.jpg');
+
+}
+.item{
+    display: block;
+    position: fixed;
+
+}
+p{ margin-left: 4vw;
+    font-size: 23px;
+    padding: 0px;
+    margin: 4vw 5vw;
+    color:white;
+}
+h4{
+    margin-left: 3vw;
+    font-size: 37px;
+    padding: 0px;
+    margin: 4vw 5vw;
+    color:white;
+}
+@media(max-width: 700px){
+Body{
+Background-repeat:repeat-y;
+Background-size: cover;
+Width:600px; height:900px;
+Background-position: top center;
+}
+}
