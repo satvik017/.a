@@ -5,6 +5,7 @@ body{
 .item{
     display: block;
     position: fixed;
+  Left: 3vw;
 
 }
 p{ margin-left: 4vw;
