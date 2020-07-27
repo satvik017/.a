@@ -7,7 +7,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     body-attachment:fixed;
-    background-position: center center;
+    background-position: auto;
 }
 
 .box{
