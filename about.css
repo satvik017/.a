@@ -25,13 +25,6 @@ h4{
 }
 
 @media(max-width: 700px){
-Body{
-Background-repeat:no-repeat;
-Background-size: cover;
-Background-position: auto;
-width: 4vw;
-height: 5vw;    
-}
 .item{
     display: block;
     position: fixed;
