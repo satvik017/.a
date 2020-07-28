@@ -2,7 +2,7 @@
 display:inline-block;
 position:fixed;
 top:25px;
-left:1vw; 
+left:1vw;
 }
 
  .right{
@@ -10,5 +10,6 @@ display:inline-block;
 position:fixed;
 top:25px;
 right:1vw; 
+clear:right;
 } 
  
