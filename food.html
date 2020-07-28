@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-
-//<![CDATA[
-
-// BloggerJS v0.3.1
-
-// Copyright (c) 2017-2018 Kenny Cruz
-
-// Licensed under the MIT License
-
-var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&amp;"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../"+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../../"+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,"/"))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+"/"+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+"//"+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
-
-//]]>
-
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>Food</title>
@@ -34,7 +19,10 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
     position:fixed;
     left: 49vw;
     top: 0px; 
-}
+}@media(max-width: 700px){
+body{
+background-image: url('Image/food-m.jpg');
+}}
 </style>
 </head>
 
@@ -53,34 +41,34 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
     </div>
     <div class="item">
         <div class="box1">
-            <a href=" https://www.chick-fil-a.com/" class="b1"><button><img src="food/chickfila.jpeg" alt="error" id="c1"><br><span><b>ChickFila</b></span></button></a>
-            <a href=" https://www.dairyqueen.com/" class="b1"><button><img src="food/dairyqueen.jpeg" alt="error" id="c2"><br><span><b>Dairy <br>Queen</b></span></button></a>
-            <a href=" https://deliveroo.co.uk/" class="b1"><button><img src="food/deliveroo.jpeg" alt="error" id="c3"><br><span><b>Deliveroo</b></span></button></a>
-            <a href=" https://www.foodpanda.com/" class="b1"><button><img src="food/foodpanda.jpeg" alt="error" id="c4"><br><span><b>food <br>Panda</b></span></button></a>
-            <a href=" https://grofers.com/" class="b1"><button><img src="food/groffers.jpeg" alt="error" id="c5"><br><span><b>Groffers</b></span></button></a>
-            <a href=" https://www.mcdonalds.com/" class="b1"><button><img src="food/macdonald.jpeg" alt="error" id="c6"><br><span><b>MCdonald</b></span></button></a>
-            <a href=" https://www.starbucks.com/" class="b1"><button><img src="food/starbucks.jpeg" alt="error" id="c7"><br><span><b>Star <br>Bucks</b></span></button></a>
-            <a href="https://www.swiggy.com/" class="b1"><button><img src="food/swiggy.jpeg" alt="error" id="c8"><br><span><b>Swiggy</b></span></button></a>
-            <a href=" https://www.wendys.com/" class="b1"><button><img src="food/wendycompany.jpeg" alt="error" id="c9"><br><span><b>Wendy <br>Company</b></span></button></a>
-            <a href="https://www.zomato.com/" class="b1"><button><img src="food/i1.jpeg" alt="error" id="c10"><br><span><b></b></span></button></a>
-            <a href="http://www.amuldairy.com/" class="b1"><button><img src="food/i2.jpeg" alt="error" id="c11"><br><span><b></b></span></button></a>
-            <a href="https://pizzaonline.dominos.co.in/" class="b1"><button><img src="food/i3.jpeg" alt="error" id="c12"><br><span><b></b></span></button></a>
-            <a href=" https://online.kfc.co.in/home" class="b1"><button><img src="food/i4.jpeg" alt="error" id="c13"><br><span><b></b></span></button></a>
-            <a href=" https://www.bigbasket.com/" class="b1"><button><img src="food/i5.jpeg" alt="error" id="c14"><br><span><b></b></span></button></a>
-            <a href="http://www.tullys.com/" class="b1"><button><img src="food/i6.jpeg" alt="error" id="c15"><br><span><b></b></span></button></a>
-            <a href=" https://www.costa.co.uk/" class="b1"><button><img src="food/i7.jpeg" alt="error" id="c16"><br><span><b></b></span></button></a>
-            <a href=" https://www.bk.com/" class="b1"><button><img src="food/i8.jpeg" alt="error" id="c17"><br><span><b></b></span></button></a>
-            <a href=" http://www.mosburger.com.sg/mos_menu.php" class="b1"><button><img src="food/i9.jpeg" alt="error" id="c18"><br><span><b></b></span></button></a>
-            <a href=" https://www.tacobell.co.in/" class="b1"><button><img src="food/i10.jpeg" alt="error" id="c19"><br><span><b></b></span></button></a>
-            <a href="https://www.churchs.com/" class="b1"><button><img src="food/i11.jpeg" alt="error" id="c20"><br><span><b></b></span></button></a>
-            <a href=" https://www.subway.com/" class="b1"><button><img src="food/i12.jpeg" alt="error" id="c21"><br><span><b></b></span></button></a>
-            <a href=" https://www.timhortons.com/" class="b1"><button><img src="food/i13.jpeg" alt="error" id="c22"><br><span><b></b></span></button></a>
-            <a href=" https://www.peets.com/" class="b1"><button><img src="food/i14.jpeg" alt="error" id="c23"><br><span><b></b></span></button></a>
-            <a href=" https://www.nandosindia.com/" class="b1"><button><img src="food/i15.jpeg" alt="error" id="c24"><br><span><b></b></span></button></a>
-            <a href="https://www.misterdonut.jp/" class="b1"><button><img src="food/i16.jpeg" alt="error" id="c25"><br><span><b></b></span></button></a>
-            <a href="https://www.dunkindonuts.com/en" class="b1"><button><img src="food/i17.jpeg" alt="error" id="c26"><br><span><b></b></span></button></a>
-            <a href=" http://cucumbertown.com/" class="b1"><button><img src="food/i18.jpeg" alt="error" id="c27"><br><span><b></b></span></button></a>
-            <a href="https://mealshare.ca/e<br>n/" class="b1"><button><img src="food/i19.jpeg" alt="error" id="c28"><br><span><b></b></span></button></a>
+            <a href=" https://www.chick-fil-a.com/" class="b1" target="_blank"><button><img src="food/chickfila.jpeg" alt="error"  class="p1"id="c1"><br><span><b>ChickFila</b></span></button></a>
+            <a href=" https://www.dairyqueen.com/" class="b1" target="_blank"><button><img src="food/dairyqueen.jpeg" alt="error"  class="p1"id="c2"><br><span><b>Dairy <br>Queen</b></span></button></a>
+            <a href=" https://deliveroo.co.uk/" class="b1" target="_blank"><button><img src="food/deliveroo.jpeg" alt="error"  class="p1"id="c3"><br><span><b>Deliveroo</b></span></button></a>
+            <a href=" https://www.foodpanda.com/" class="b1" target="_blank"><button><img src="food/foodpanda.jpeg" alt="error"  class="p1"id="c4"><br><span><b>food <br>Panda</b></span></button></a>
+            <a href=" https://grofers.com/" class="b1" target="_blank"><button><img src="food/groffers.jpeg" alt="error"  class="p1"id="c5"><br><span><b>Groffers</b></span></button></a>
+            <a href=" https://www.mcdonalds.com/" class="b1" target="_blank"><button><img src="food/macdonald.jpeg" alt="error"  class="p1"id="c6"><br><span><b>MCdonald</b></span></button></a>
+            <a href=" https://www.starbucks.com/" class="b1" target="_blank"><button><img src="food/starbucks.jpeg" alt="error"  class="p1"id="c7"><br><span><b>Star <br>Bucks</b></span></button></a>
+            <a href="https://www.swiggy.com/" class="b1" target="_blank"><button><img src="food/swiggy.jpeg" alt="error"  class="p1"id="c8"><br><span><b>Swiggy</b></span></button></a>
+            <a href=" https://www.wendys.com/" class="b1" target="_blank"><button><img src="food/wendycompany.jpeg" alt="error"  class="p1"id="c9"><br><span><b>Wendy <br>Company</b></span></button></a>
+            <a href="https://www.zomato.com/" class="b1" target="_blank"><button><img src="food/i1.jpeg" alt="error"  class="p1"id="c10"><br><span><b></b></span></button></a>
+            <a href="http://www.amuldairy.com/" class="b1" target="_blank"><button><img src="food/i2.jpeg" alt="error"  class="p1"id="c11"><br><span><b></b></span></button></a>
+            <a href="https://pizzaonline.dominos.co.in/" class="b1" target="_blank"><button><img src="food/i3.jpeg" alt="error"  class="p1"id="c12"><br><span><b></b></span></button></a>
+            <a href=" https://online.kfc.co.in/home" class="b1" target="_blank"><button><img src="food/i4.jpeg" alt="error"  class="p1"id="c13"><br><span><b></b></span></button></a>
+            <a href=" https://www.bigbasket.com/" class="b1" target="_blank"><button><img src="food/i5.jpeg" alt="error"  class="p1"id="c14"><br><span><b></b></span></button></a>
+            <a href="http://www.tullys.com/" class="b1" target="_blank"><button><img src="food/i6.jpeg" alt="error"  class="p1"id="c15"><br><span><b></b></span></button></a>
+            <a href=" https://www.costa.co.uk/" class="b1" target="_blank"><button><img src="food/i7.jpeg" alt="error"  class="p1"id="c16"><br><span><b></b></span></button></a>
+            <a href=" https://www.bk.com/" class="b1" target="_blank"><button><img src="food/i8.jpeg" alt="error"  class="p1"id="c17"><br><span><b></b></span></button></a>
+            <a href=" http://www.mosburger.com.sg/mos_menu.php" class="b1" target="_blank"><button><img src="food/i9.jpeg" alt="error"  class="p1"id="c18"><br><span><b></b></span></button></a>
+            <a href=" https://www.tacobell.co.in/" class="b1" target="_blank"><button><img src="food/i10.jpeg" alt="error"  class="p1"id="c19"><br><span><b></b></span></button></a>
+            <a href="https://www.churchs.com/" class="b1" target="_blank"><button><img src="food/i11.jpeg" alt="error"  class="p1"id="c20"><br><span><b></b></span></button></a>
+            <a href=" https://www.subway.com/" class="b1" target="_blank"><button><img src="food/i12.jpeg" alt="error"  class="p1"id="c21"><br><span><b></b></span></button></a>
+            <a href=" https://www.timhortons.com/" class="b1" target="_blank"><button><img src="food/i13.jpeg" alt="error"  class="p1"id="c22"><br><span><b></b></span></button></a>
+            <a href=" https://www.peets.com/" class="b1" target="_blank"><button><img src="food/i14.jpeg" alt="error"  class="p1"id="c23"><br><span><b></b></span></button></a>
+            <a href=" https://www.nandosindia.com/" class="b1" target="_blank"><button><img src="food/i15.jpeg" alt="error"  class="p1"id="c24"><br><span><b></b></span></button></a>
+            <a href="https://www.misterdonut.jp/" class="b1" target="_blank"><button><img src="food/i16.jpeg" alt="error"  class="p1"id="c25"><br><span><b></b></span></button></a>
+            <a href="https://www.dunkindonuts.com/en" class="b1" target="_blank"><button><img src="food/i17.jpeg" alt="error"  class="p1"id="c26"><br><span><b></b></span></button></a>
+            <a href=" http://cucumbertown.com/" class="b1" target="_blank"><button><img src="food/i18.jpeg" alt="error"  class="p1"id="c27"><br><span><b></b></span></button></a>
+            <a href="https://mealshare.ca/e<br>n/" class="b1" target="_blank"><button><img src="food/i19.jpeg" alt="error"  class="p1"id="c28"><br><span><b></b></span></button></a>
         </div>
     </div>
    

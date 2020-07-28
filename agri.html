@@ -2,31 +2,6 @@
 <html lang="en">
 
 <head>
-<script type="text/javascript">
-
-//<![CDATA[
-
-// BloggerJS v0.3.1
-
-// Copyright (c) 2017-2018 Kenny Cruz
-
-// Licensed under the MIT License
-
-var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&amp;"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../"+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../../"+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,"/"))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+"/"+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+"//"+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
-
-//]]>
-
-</script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173665972-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-173665972-1');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agriculture</title>
@@ -45,13 +20,17 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
 .a2{position: fixed;
     left: 50vw;
     top: 0px;
-}</style>
+}
+@media(max-width: 700px){
+body{
+background-image: url('Image/agri-m.jpg');
+}}
+</style>
 </head>
 
 <body>
      <div class="left button">
 <a href="categories.html"><img src="Image/return.png" alt="back-btn" width="60" height="60"></a></div>
-
 <div class="right button">
 <a href="index.html"><img src="Image/home.png" alt="home-btn" width="60" height="60"></a></div>
     <div class="box">
@@ -62,56 +41,56 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
     </div>
     <div class="item">
         <div class="box1">
-            <a href="https://caneup.in/Default.aspx" class="b1"><button><img src="agriculture/canaby.png" alt="error"
+            <a href="https://caneup.in/Default.aspx" class="b1" target="_blank"><button><img src="agriculture/canaby.png" alt="error" class="p1"
                         id="c1"><br><span><b>Caneup</b></span></button></a>
 
-            <a href="https://apeda.gov.in/apedawebsite/" class="b1"><button><img src="agriculture/apeda.png" alt="error"
+            <a href="https://apeda.gov.in/apedawebsite/" class="b1" target="_blank"><button><img src="agriculture/apeda.png" alt="error" class="p1"
                         id="c3"><br><span><b></b></span></button></a>
 
-            <a href="https://www.tractorjunction.com/" class="b1"><button><img src="agriculture/tractorjunc.png" alt="error"
+            <a href="https://www.tractorjunction.com/" class="b1" target="_blank"><button><img src="agriculture/tractorjunc.png" alt="error" class="p1"
                         id="c7"><br><span><b></b></span></button></a>
 
-            <a href="https://www.india.gov.in" class="b1"><button><img src="agriculture/i2.png" alt="error"
+            <a href="https://www.india.gov.in" class="b1" target="_blank"><button><img src="agriculture/i2.png" alt="error" class="p1"
                         id="c9"><br><span><b></b></span></button></a>
 
-            <a href="https://isapindia.org/" class="b1"><button><img src="agriculture/i6.png" alt="error"
+            <a href="https://isapindia.org/" class="b1" target="_blank"><button><img src="agriculture/i6.png" alt="error" class="p1"
                         id="c13"><br><span><b></b></span></button></a>
 
-            <a href="https://icar.org.in/" class="b1"><button><img src="agriculture/i11.png" alt="error"
+            <a href="https://icar.org.in/" class="b1" target="_blank"><button><img src="agriculture/i11.png" alt="error" class="p1"
                         id="c18"><br><span><b></b></span></button></a>
-            <a href="http://www.fao.org/about/en/" class="b1"><button><img src="agriculture/i13.png" alt="error"
+            <a href="http://www.fao.org/about/en/" class="b1" target="_blank"><button><img src="agriculture/i13.png" alt="error" class="p1"
                         id="c19"><br><span><b></b></span></button></a>
-            <a href="https://www.ifad.org/en/" class="b1"><button><img src="agriculture/i14.png" alt="error"
+            <a href="https://www.ifad.org/en/" class="b1" target="_blank"><button><img src="agriculture/i14.png" alt="error" class="p1"
                         id="c20"><br><span><b></b></span></button></a>
-            <a href="https://rural.nic.in/" class="b1"><button><img src="agriculture/i15.png" alt="error"
+            <a href="https://rural.nic.in/" class="b1" target="_blank"><button><img src="agriculture/i15.png" alt="error" class="p1"
                         id="c21"><br><span><b></b></span></button></a>
-            <a href="http://agriculture.gov.in/" class="b1"><button><img src="agriculture/i17.png" alt="error"
+            <a href="http://agriculture.gov.in/" class="b1" target="_blank"><button><img src="agriculture/i17.png" alt="error" class="p1"
                         id="c22"><br><span><b></b></span></button></a>
-            <a href="https://mkisan.gov.in/" class="b1"><button><img src="agriculture/i18.png" alt="error"
+            <a href="https://mkisan.gov.in/" class="b1" target="_blank"><button><img src="agriculture/i18.png" alt="error" class="p1"
                         id="c23"><br><span><b></b></span></button></a>
-            <a href="http://www.agtechworld.in/" class="b1"><button class="d"><img src="agriculture/agtech.png" alt="error"
+            <a href="http://www.agtechworld.in/" class="b1" target="_blank"><button class="d"><img src="agriculture/agtech.png" alt="error" class="p1"
                         id="c2"><br><span><b></b></span></button></a>
-            <a href="https://farmer.gov.in/" class="b1"><button class="d"><img src="agriculture/farmersportal.png" alt="error"
+            <a href="https://farmer.gov.in/" class="b1" target="_blank"><button class="d"><img src="agriculture/farmersportal.png" alt="error" class="p1"
                         id="c4"><br><span><b></b></span></button></a>
-            <a href="http://agriretailers.com/" class="b1"><button class="d"><img src="agriculture/agriretailer.png" alt="error"
+            <a href="http://agriretailers.com/" class="b1" target="_blank"><button class="d"><img src="agriculture/agriretailer.png" alt="error" class="p1"
                         id="c5"><br><span><b></b></span></button></a>
-            <a href="http://tractorbuyersguide.in/" class="b1"><button class="d"><img src="agriculture/tbg.png" alt="error"
+            <a href="http://tractorbuyersguide.in/" class="b1" target="_blank"><button class="d"><img src="agriculture/tbg.png" alt="error" class="p1"
                         id="c6"><br><span><b></b></span></button></a>
-            <a href="https://www.indiaagronet.com/" class="b1"><button class="d"><img src="agriculture/i1.png" alt="error"
+            <a href="https://www.indiaagronet.com/" class="b1" target="_blank"><button class="d"><img src="agriculture/i1.png" alt="error" class="p1"
                         id="c8"><br><span><b></b></span></button></a>
-            <a href="http://www.agriwatch.com/" class="b1"><button class="d"><img src="agriculture/i3.png" alt="error"
+            <a href="http://www.agriwatch.com/" class="b1" target="_blank"><button class="d"><img src="agriculture/i3.png" alt="error" class="p1"
                         id="c10"><br><span><b></b></span></button></a>
-            <a href="https://krishijagran.com/" class="b1"><button class="d"><img src="agriculture/i4.png" alt="error"
+            <a href="https://krishijagran.com/" class="b1" target="_blank"><button class="d"><img src="agriculture/i4.png" alt="error" class="p1"
                         id="c11"><br><span><b></b></span></button></a>
-            <a href="http://agriinsurance.com/" class="b1"><button class="d"><img src="agriculture/i5.png" alt="error"
+            <a href="http://agriinsurance.com/" class="b1" target="_blank"><button class="d"><img src="agriculture/i5.png" alt="error" class="p1"
                         id="c12"><br><span><b></b></span></button></a>
-            <a href="http://agricollegenews.com/index.html" class="b1"><button class="d"><img src="agriculture/i7.png" alt="error"
+            <a href="http://agricollegenews.com/index.html" class="b1" target="_blank"><button class="d"><img src="agriculture/i7.png" alt="error" class="p1"
                         id="c14"><br><span><b></b></span></button></a>
-            <a href="http://fert.nic.in/" class="b1"><button class="d"><img src="agriculture/i8.png" alt="error"
+            <a href="http://fert.nic.in/" class="b1" target="_blank"><button class="d"><img src="agriculture/i8.png" alt="error" class="p1"
                         id="c15"><br><span><b></b></span></button></a>
-            <a href="https://www.cropscience.bayer.us/" class="b1"><button class="d"><img src="agriculture/i9.png" alt="error"
+            <a href="https://www.cropscience.bayer.us/" class="b1" target="_blank"><button class="d"><img src="agriculture/i9.png" alt="error" class="p1"
                         id="c16"><br><span><b></b></span></button></a>
-            <a href="http://www.agriculturetoday.in/" class="b1"><button class="d"><img src="agriculture/i10.png" alt="error"
+            <a href="http://www.agriculturetoday.in/" class="b1" target="_blank"><button class="d"><img src="agriculture/i10.png" alt="error" class="p1"
                         id="c17"><br><span><b></b></span></button></a>
         </div>
     </div>

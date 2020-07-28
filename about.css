@@ -1,18 +1,21 @@
 body{
     background-image: url('Image/about.jpg');
 }
+
 .item{
     display: block;
     position: fixed;
-  Left: 10vw;
-
+   Left: 10vw;
 }
-p{ margin-left: 4vw;
+
+p{ 
+    margin-left: 4vw;
     font-size: 23px;
     padding: 0px;
     margin: 4vw 5vw;
     color:white;
 }
+
 h4{
     margin-left: 5vw;
     font-size: 37px;
@@ -20,7 +23,8 @@ h4{
     margin: 4vw 5vw;
     color:white;
 }
-@media(max-width: 700px,min-width:320px){
+
+@media(max-width: 700px){
 Body{
 Background-repeat:no-repeat;
 Background-size: cover;

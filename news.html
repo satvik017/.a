@@ -1,32 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-
-//<![CDATA[
-
-// BloggerJS v0.3.1
-
-// Copyright (c) 2017-2018 Kenny Cruz
-
-// Licensed under the MIT License
-
-var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&amp;"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../"+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../../"+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,"/"))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+"/"+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+"//"+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
-
-//]]>
-
-</script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173665972-1"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-173665972-1');
-  </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>News</title>
@@ -47,7 +21,11 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
     position:fixed;
     left: 50vw;
     top: 0px;   
-}</style>
+}@media(max-width: 700px){
+body{
+background-image: url('Image/news-m.jpg');
+}}
+</style>
 </head>
 
 <body>
@@ -68,34 +46,34 @@ var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="
 
     <div class="item">
         <div class="box1">
-            <a href="https://www.dnaindia.com/authors" class="b1"><button><img src="news/dailynewsanalysis.jpeg" alt="error" id="c1"><br><span><b>DailyNews <br>Analysis</b></span></button></a>
-            <a href="https://www.easternherald.com/" class="b1"><button><img src="news/easternherlard.jpeg" alt="error" id="c2"><br><span><b>Eastern <br>Herald</b></span></button></a>
-            <a href="https://www.firstpost.com/" class="b1"><button><img src="news/fistpost.jpeg" alt="error" id="c3"><br><span><b>FirstPost</b></span></button></a>
-            <a href="https://www.freepressjournal.in/" class="b1"><button><img src="news/freepressjournal.jpeg" alt="error" id="c4"><br><span><b>FreePress <br>Journal</b></span></button></a>
-            <a href="https://chandigarhmetro.com/" class="b1"><button><img src="news/chandigarhmetro.jpeg" alt="error" id="c5"><br><span><b>Chandigarh <br>Metro</b></span></button></a>
-            <a href="https://www.business-standard.com/" class="b1"><button><img src="news/businessstandard.jpeg" alt="error" id="c6"><br><span><b>Business <br>Standard</b></span></button></a>
-            <a href="https://quintdaily.com/" class="b1"><button><img src="news/quintdaily.jpeg" alt="error" id="c7"><br><span><b>QuintDaily</b></span></button></a>
-            <a href="https://scroll.in/" class="b1"><button><img src="news/scrool.in.jpeg" alt="error" id="c8"><br><span><b>ScrollIn</b></span></button></a>
-            <a href="https://www.thequint.com/" class="b1"><button><img src="news/thequint.jpeg" alt="error" id="c9"><br><span><b>TheQuint</b></span></button></a>
-            <a href="https://www.washingtonpost.com/" class="b1"><button><img src="news/washingtonpost.jpeg" alt="error" id="c10"><br><span><b>Wasington <br>Post</b></span></button></a>
-            <a href="https://timesofindia.indiatimes.com/defaultinterstitial.cms" class="b1"><button><img src="news/i1.jpeg" alt="error" id="c11"><br><span><b></b></span></button></a>
-            <a href="https://www.ndtv.com/" class="b1"><button><img src="news/i2.jpeg" alt="error" id="c12"><br><span><b></b></span></button></a>
-            <a href="https://indianexpress.com/" class="b1"><button><img src="news/i3.jpeg" alt="error" id="c13"><br><span><b></b></span></button></a>
-            <a href="https://www.indiatoday.in/" class="b1"><button><img src="news/i4.jpeg" alt="error" id="c14"><br><span><b></b></span></button></a>
-            <a href="https://www.thehindu.com/" class="b1"><button><img src="news/i5.jpeg" alt="error" id="c15"><br><span><b></b></span></button></a>
-            <a href="https://www.news18.com/" class="b1"><button><img src="news/i6.jpeg" alt="error" id="c16"><br><span><b></b></span></button></a>
-            <a href="http://www.asianage.com/" class="b1"><button><img src="news/i7.jpg" alt="error" id="c17"><br><span><b></b></span></button></a>
-            <a href="https://www.dailyexcelsior.com/" class="b1"><button><img src="news/i8.jpeg" alt="error" id="c18"><br><span><b></b></span></button></a>
-            <a href="https://www.financialexpress.com/" class="b1"><button><img src="news/i9.jpeg" alt="error" id="c19"><br><span><b></b></span></button></a>
-            <a href="http://www.businesslife.net/" class="b1"><button><img src="news/i10.jpeg" alt="error" id="c20"><br><span><b></b></span></button></a>
-            <a href="https://www.thebetterindia.com/" class="b1"><button><img src="news/i11.jpeg" alt="error" id="c21"><br><span><b></b></span></button></a>
-            <a href="http://www.socialsamosa.com/" class="b1"><button><img src="news/i12.jpeg" alt="error" id="c22"><br><span><b></b></span></button></a>
-            <a href="https://topyaps.com/" class="b1"><button><img src="news/i13.jpeg" alt="error" id="c23"><br><span><b></b></span></button></a>
-            <a href="https://newswithchai.com/" class="b1"><button><img src="news/i14.png" alt="error" id="c24"><br><span><b></b></span></button></a>
-            <a href="https://edition.cnn.com/" class="b1"><button><img src="news/15.jpeg" alt="error" id="c25"><br><span><b></b></span></button></a>
-            <a href="https://www.oneindia.com/" class="b1"><button><img src="news/i16.jpeg" alt="error" id="c26"><br><span><b></b></span></button></a>
-            <a href="https://swachhindia.ndtv.com/" class="b1"><button><img src="news/i17.jpeg" alt="error" id="c27"><br><span><b></b></span></button></a>
-            <a href="https://www.deccanchronicle.com/" class="b1"><button><img src="news/i18.jpeg" alt="error" id="c28"><br><span><b></b></span></button></a>
+            <a href="https://www.dnaindia.com/authors" class="b1" target="_blank"><button><img src="news/dailynewsanalysis.jpeg" alt="error"  class="p1"id="c1"><br><span><b>DailyNews <br>Analysis</b></span></button></a>
+            <a href="https://www.easternherald.com/" class="b1" target="_blank"><button><img src="news/easternherlard.jpeg" alt="error"  class="p1"id="c2"><br><span><b>Eastern <br>Herald</b></span></button></a>
+            <a href="https://www.firstpost.com/" class="b1" target="_blank"><button><img src="news/fistpost.jpeg" alt="error"  class="p1"id="c3"><br><span><b>FirstPost</b></span></button></a>
+            <a href="https://www.freepressjournal.in/" class="b1" target="_blank"><button><img src="news/freepressjournal.jpeg" alt="error"  class="p1"id="c4"><br><span><b>FreePress <br>Journal</b></span></button></a>
+            <a href="https://chandigarhmetro.com/" class="b1" target="_blank"><button><img src="news/chandigarhmetro.jpeg" alt="error"  class="p1"id="c5"><br><span><b>Chandigarh <br>Metro</b></span></button></a>
+            <a href="https://www.business-standard.com/" class="b1" target="_blank"><button><img src="news/businessstandard.jpeg" alt="error"  class="p1"id="c6"><br><span><b>Business <br>Standard</b></span></button></a>
+            <a href="https://quintdaily.com/" class="b1" target="_blank"><button><img src="news/quintdaily.jpeg" alt="error"  class="p1"id="c7"><br><span><b>QuintDaily</b></span></button></a>
+            <a href="https://scroll.in/" class="b1" target="_blank"><button><img src="news/scrool.in.jpeg" alt="error"  class="p1"id="c8"><br><span><b>ScrollIn</b></span></button></a>
+            <a href="https://www.thequint.com/" class="b1" target="_blank"><button><img src="news/thequint.jpeg" alt="error"  class="p1"id="c9"><br><span><b>TheQuint</b></span></button></a>
+            <a href="https://www.washingtonpost.com/" class="b1" target="_blank"><button><img src="news/washingtonpost.jpeg" alt="error"  class="p1"id="c10"><br><span><b>Wasington <br>Post</b></span></button></a>
+            <a href="https://timesofindia.indiatimes.com/defaultinterstitial.cms" class="b1" target="_blank"><button><img src="news/i1.jpeg" alt="error"  class="p1"id="c11"><br><span><b></b></span></button></a>
+            <a href="https://www.ndtv.com/" class="b1" target="_blank"><button><img src="news/i2.jpeg" alt="error"  class="p1"id="c12"><br><span><b></b></span></button></a>
+            <a href="https://indianexpress.com/" class="b1" target="_blank"><button><img src="news/i3.jpeg" alt="error"  class="p1"id="c13"><br><span><b></b></span></button></a>
+            <a href="https://www.indiatoday.in/" class="b1" target="_blank"><button><img src="news/i4.jpeg" alt="error"  class="p1"id="c14"><br><span><b></b></span></button></a>
+            <a href="https://www.thehindu.com/" class="b1" target="_blank"><button><img src="news/i5.jpeg" alt="error"  class="p1"id="c15"><br><span><b></b></span></button></a>
+            <a href="https://www.news18.com/" class="b1" target="_blank"><button><img src="news/i6.jpeg" alt="error"  class="p1"id="c16"><br><span><b></b></span></button></a>
+            <a href="http://www.asianage.com/" class="b1" target="_blank"><button><img src="news/i7.jpg" alt="error"  class="p1"id="c17"><br><span><b></b></span></button></a>
+            <a href="https://www.dailyexcelsior.com/" class="b1" target="_blank"><button><img src="news/i8.jpeg" alt="error"  class="p1"id="c18"><br><span><b></b></span></button></a>
+            <a href="https://www.financialexpress.com/" class="b1" target="_blank"><button><img src="news/i9.jpeg" alt="error"  class="p1"id="c19"><br><span><b></b></span></button></a>
+            <a href="http://www.businesslife.net/" class="b1" target="_blank"><button><img src="news/i10.jpeg" alt="error"  class="p1"id="c20"><br><span><b></b></span></button></a>
+            <a href="https://www.thebetterindia.com/" class="b1" target="_blank"><button><img src="news/i11.jpeg" alt="error"  class="p1"id="c21"><br><span><b></b></span></button></a>
+            <a href="http://www.socialsamosa.com/" class="b1" target="_blank"><button><img src="news/i12.jpeg" alt="error"  class="p1"id="c22"><br><span><b></b></span></button></a>
+            <a href="https://topyaps.com/" class="b1" target="_blank"><button><img src="news/i13.jpeg" alt="error"  class="p1"id="c23"><br><span><b></b></span></button></a>
+            <a href="https://newswithchai.com/" class="b1" target="_blank"><button><img src="news/i14.png" alt="error"  class="p1"id="c24"><br><span><b></b></span></button></a>
+            <a href="https://edition.cnn.com/" class="b1" target="_blank"><button><img src="news/15.jpeg" alt="error"  class="p1"id="c25"><br><span><b></b></span></button></a>
+            <a href="https://www.oneindia.com/" class="b1" target="_blank"><button><img src="news/i16.jpeg" alt="error"  class="p1"id="c26"><br><span><b></b></span></button></a>
+            <a href="https://swachhindia.ndtv.com/" class="b1" target="_blank"><button><img src="news/i17.jpeg" alt="error"  class="p1"id="c27"><br><span><b></b></span></button></a>
+            <a href="https://www.deccanchronicle.com/" class="b1" target="_blank"><button><img src="news/i18.jpeg" alt="error"  class="p1"id="c28"><br><span><b></b></span></button></a>
         </div>
     </div>
    

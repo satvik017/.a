@@ -13,12 +13,15 @@ body{
      right: 56%;
     top: 43%;
 }
-.a1{position: fixed;
+
+.a1{
+    position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 5vw;
     color: white;
     text-shadow: 10px 11px 10px black;
 }
+
 .box2{
     display: flex;
     align-items: center;
@@ -27,46 +30,28 @@ body{
     top: 64%;
     left: 7vw;
 }
+
 .item{
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 4fr;
     grid-column-gap: 24vw;
     align-items: center;
-   
-
 }
+
 .b1{
     box-sizing: border-box;
     background-color: transparent;
- 
     height: 20px;
     width: 20px;
 }
 
-#c1{
+.p1{
     width: 8vw;
     height: 8vw;
     border-radius: 100%;
      box-shadow: 10px 9px 10px black;
 }
-#c2{
-    width: 8vw;
-    height: 8vw;
-    border-radius: 100%;
-     box-shadow: 10px 9px 10px black;
-}
-#c3{
-    width: 8vw;
-    height: 8vw;
-    border-radius: 100%;
-     box-shadow: 10px 9px 10px black;
-}
-#c4{
-    width: 8vw;
-    height: 8vw;
-    border-radius: 100%;
-     box-shadow: 10px 9px 10px black;
-}
+
 @media(max-width: 700px){
     body{
         height: 850px;
@@ -82,23 +67,8 @@ body{
     }
 .item{
     Grid-column-gap:18vw;
-}
-    #c1{
-        width: 20vw;
-        height: 20vw;
-        border-radius: 100%;
-    }
-    #c2{
-        width: 20vw;
-        height: 20vw;
-        border-radius: 100%;
-    }
-    #c3{
-        width: 20vw;
-        height: 20vw;
-        border-radius: 100%;
-    }
-    #c4{
+
+    .p1{
         width: 20vw;
         height: 20vw;
         border-radius: 100%;
