@@ -2,22 +2,13 @@
 display:inline-block;
 position:fixed;
 top:25px;
-left:1vw;
-clear:left;
-border-radius: 100%;
-box-shadow: 10px 9px 10px black; 
-background-color: white;
-box-sizing: border-box; 
+left:1vw; 
 }
 
  .right{
 display:inline-block;
 position:fixed;
 top:25px;
-right:1vw;
-border-radius: 100%;
-box-shadow: 10px 9px 10px black; 
-background-color: white;
-box-sizing: border-box; 
+right:1vw; 
 } 
  
