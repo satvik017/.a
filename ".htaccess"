@@ -1,16 +1,16 @@
 RewriteEngine on
-RewriteRule ^Home?$ index.html
+RewriteRule ^home?$ index.html
 RewriteRule ^categories?$categories.html
-RewriteRule ^About Us?$about.html
-RewriteRule ^Agriculture?$agri.html
-RewriteRule ^Contact Us?$contact.html
-RewriteRule ^Developer?$developer.html
-RewriteRule ^Education?$education.html
-RewriteRule ^Fashion?$fashion.html
-RewriteRule ^Food?$food.html
-RewriteRule ^Health?$health.html
-RewriteRule ^Movies?$movies.html
-RewriteRule ^Music?$music.html
-RewriteRule ^News?$news.html
-RewriteRule ^Social media?$social.html
-RewriteRule ^Technology?$tech.html
+RewriteRule ^about-us?$about.html
+RewriteRule ^agriculture?$agri.html
+RewriteRule ^contact Us?$contact.html
+RewriteRule ^developer?$developer.html
+RewriteRule ^education?$education.html
+RewriteRule ^fashion?$fashion.html
+RewriteRule ^food?$food.html
+RewriteRule ^health?$health.html
+RewriteRule ^movies?$movies.html
+RewriteRule ^music?$music.html
+RewriteRule ^news?$news.html
+RewriteRule ^social-media?$social.html
+RewriteRule ^technology?$tech.html
