@@ -2,7 +2,7 @@
 display:inline-block;
 position:fixed;
 top:25px;
-animation: go 1s ease infinite;
+animation: go 1s ease-in-out infinite;
 }
 @keyframes go{
 0%{
@@ -22,7 +22,7 @@ position:fixed;
 top:25px;
 right:1.7vw; 
 clear:right;
-animation:yo 1s ease infinite;
+animation:yo 1s ease-in-out infinite;
 } 
 @keyframes yo{
 0%{
