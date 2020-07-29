@@ -2,7 +2,7 @@
 display:inline-block;
 position:fixed;
 top:25px;
-animation: go 1s ease-in-out infinite;
+<!--animation: go 1s ease-in-out infinite;
 }
 @keyframes go{
 0%{
@@ -14,7 +14,7 @@ left:-13px;
 100%{
 left:1.7vw;
 }
-}
+} -->
 
  .right{
 display:inline-block;
@@ -22,7 +22,7 @@ position:fixed;
 top:25px;
 right:1.7vw; 
 clear:right;
-animation:yo 1s ease-in-out infinite;
+<!--animation:yo 1s ease-in-out infinite;
 } 
 @keyframes yo{
 0%{
@@ -36,4 +36,4 @@ transform:scale(1);
 }
 }
 
- 
+ -->
