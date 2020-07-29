@@ -1,7 +1,7 @@
 RewriteEngine on
 RewriteRule ^home?$ index.html
 RewriteRule ^categories?$categories.html
-RewriteRule ^about-us?$about.html
+RewriteRule ^about?$about.html
 RewriteRule ^agriculture?$agri.html
 RewriteRule ^contact Us?$contact.html
 RewriteRule ^developer?$developer.html
@@ -12,5 +12,5 @@ RewriteRule ^health?$health.html
 RewriteRule ^movies?$movies.html
 RewriteRule ^music?$music.html
 RewriteRule ^news?$news.html
-RewriteRule ^social-media?$social.html
+RewriteRule ^social?$social.html
 RewriteRule ^technology?$tech.html
