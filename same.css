@@ -42,11 +42,16 @@ body{
 
 .b1{
     position: relative;
+transition:0.3s linear;
+}
+.b1:hover{
+transform:scale(1.05)
 }
 
 .b1 span{
     font-size: 2vw;
 }
+
 
 button{
        background-color: white;
@@ -65,8 +70,12 @@ button:hover{
     height: 8vw;
     width: 8vw;
     border-radius: 100%;
+transition:0.3s linear;
 }
 
+.p1:hover{
+transform:scale(1.05)
+}
 .s1{
     box-sizing: border-box;
     height: 5vw;
