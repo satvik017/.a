@@ -14,3 +14,4 @@ RewriteRule ^music?$music.html
 RewriteRule ^news?$news.html
 RewriteRule ^social?$social.html
 RewriteRule ^tech?$tech.html
+RewriteRule ^games?$games.html
