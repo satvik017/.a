@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+
+//<![CDATA[
+
+// BloggerJS v0.3.1
+
+// Copyright (c) 2017-2018 Kenny Cruz
+
+// Licensed under the MIT License
+
+var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&amp;"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../"+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../../"+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,"/"))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+"/"+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+"//"+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
+
+//]]>
+
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173665972-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173665972-1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Education</title>
+<link rel="stylesheet" href="same.css">
+<link rel="stylesheet" href="backbtn.css">
+<link rel="shortcut icon" href="Image/favicon.png " type="image/png">
+  <style>body{
+    background-image: url('Image/education.jpg');
+}
+
+.a1{
+   
+    position: fixed;
+    left: 32vw;
+    top: 0px;
+}
+.a2{
+    position:fixed;
+    left: 49vw;
+    top: 0px;   
+}@media(max-width: 700px){
+body{
+background-image: url('Image/education-m.jpg');
+.a1{   
+    position: fixed;
+    left: 31vw;
+    top: 0px;
+}
+.a2{
+    position:fixed;
+    left: 50vw;
+    top: 0px; 
+}
+}}</style>
+</head>
+
+<body>
+    
+    <div class="left button">
+        <a href="categories"><img src="Image/return.png" alt="back-btn" width="60" height="60"></a></div>
+        
+        <div class="right button">
+            <a href="https://www.vfindfit.com"><img src="Image/home.png" alt="home-btn" width="60" height="60"></a></div>
+            <div class="box">
+                <span class="a1">
+                    Edu
+                </span>
+                <span class="a2">cation</span>
+            </div>
+            <div class="item">
+                <div class="box1">
+                    <!--A box is here-->
+                    <a href="https://aglasem.com/" class="b1" target="_blank"><button><img src="education/aglasem-logo-preview-min.jpg"   class="p1"id="c47"><br><span><b></b></span></button></a>
+                    <a href="https://academicearth.org/" class="b1" target="_blank"><button><img src="education/academicearth.jpeg"   class="p1"id="c1"><br><span><b>Academic <br>Earth</b></span></button></a>
+                    <a href=" https://alison.com/" class="b1" target="_blank"><button><img src="education/alicon.jpeg"   class="p1"id="c2"><br><span><b>Alison</b></span></button></a>
+                    <a href="https://amikumu.com/" class="b1" target="_blank"><button><img src="education/amikumu.jpeg"   class="p1"id="c3"><br><span><b>Amikumu</b></span></button></a>
+                    <a href=" https://www.academia.edu/" class="b1" target="_blank"><button><img src="education/i6.jpeg"   class="p1"id="c25"><br><span><b></b></span></button></a>
+                    
+                    <!--B box is here-->
+                    <a href="https://www.busuu.com/" class="b1" target="_blank"><button><img src="education/bussy.jpeg"   class="p1"id="c4"><br><span><b>Busuu</b></span></button></a>
+                    <a href="https://byjus.com/free-live-classes" class="b1" target="_blank"><button><img src="education/i11.jpeg"   class="p1"id="c30"><br><span><b></b></span></button></a>
+                    <a href=" https://www.brightstorm.com/" class="b1" target="_blank"><button><img src="education/i10.jpeg"   class="p1"id="c29"><br><span><b></b></span></button></a>
+                    <a href=" https://bigthink.com/" class="b1" target="_blank"><button><img src="education/i8.jpeg"   class="p1"id="c27"><br><span><b></b></span></button></a>
+                    <a href="https://www.boardinfinity.com/" class="b1" target="_blank"><button><img src="education/board.png"   class="p1"id="c41"><br><span><b>Boardinfinity</b></span></button></a>
+                    <a href="https://www.britannica.com/" class="b1" target="_blank"><button><img src="education/1200x630wa.png"   class="p1"id="c49"><br><span><b></b></span></button></a>
+                    <a href="https://brainly.com/" class="b1" target="_blank"><button><img src="education/b.png"   class="p1"id="c52"><br><span><b>Brainly</b></span></button></a>
+                    <a href="https://www.blackboard.com/" class="b1" target="_blank"><button><img src="education/blackboard.jpg"   class="p1"id="c54"><br><span><b></b></span></button></a>
+                    <a href=https://www.benesse.co.jp/"" class="b1" target="_blank"><button><img src="education/benesse.jpg"   class="p1"id="c65"><br><span><b></b></span></button></a>
+                    <a href="https://brasilescola.uol.com.br/" class="b1" target="_blank"><button><img src="education/bco.jpg"   class="p1"id="c72"><br><span><b></b></span></button></a>
+                    
+                    <!--C box is here-->
+                    <a href="https://www.classmates.com/" class="b1" target="_blank"><button><img src="education/classmates.jpeg"   class="p1"id="c5"><br><span><b>ClassMates</b></span></button></a>
+                    <a href="https://www.coursera.org/" class="b1" target="_blank"><button><img src="education/i3.jpeg"   class="p1"id="c22"><br><span><b></b></span></button></a>
+                    <a href=" https://cosmolearning.org/" class="b1" target="_blank"><button><img src="education/cosmolearning.jpeg"   class="p1"id="c6"><br><span><b>Cosmo <br>Learning</b></span></button></a>
+                    <a href="https://www.chegg.com/" class="b1" target="_blank"><button><img src="education/chegg.png"   class="p1"id="c59"><br><span><b></b></span></button></a>
+                    <a href="http://cbseresults.nic.in/" class="b1" target="_blank"><button><img src="education/cbsc.jpg"   class="p1"id="c63"><br><span><b>CBSC<br>Results</b></span></button></a>
+                    <a href="https://www.coursehero.com/" class="b1" target="_blank"><button><img src="education/co.png"   class="p1"id="c67"><br><span><b></b></span></button></a>
+                    <a href="https://www.collegeboard.org/" class="b1" target="_blank"><button><img src="education/coll.png"   class="p1"id="c73"><br><span><b></b></span></button></a>
+                    <a href="https://www.cengage.co.in/" class="b1" target="_blank"><button><img src="education/cen.jpg"   class="p1"id="c76"><br><span><b></b></span></button></a>
+                    
+                    <!--D box is here-->
+                    <a href=" https://www.d2l.com/en-apac/" class="b1" target="_blank"><button><img src="education/desire2learn.jpeg"   class="p1"id="c41"><br><span><b>Desire 2<br>Learn</b></span></button></a>
+                    <a href="https://www.duolingo.com/" class="b1" target="_blank"><button><img src="education/duolingo.png"   class="p1"id="c53"><br><span><b>Duolingo</b></span></button></a>
+                    
+                    <!--E box is here-->
+                    <a href=" https://www.open.edu/itunes/" class="b1" target="_blank"><button><img src="education/i4.jpeg"   class="p1"id="c23"><br><span><b></b></span></button></a>
+                    <a href=" https://www.edx.org/" class="b1" target="_blank"><button><img src="education/i9.jpeg"   class="p1"id="c28"><br><span><b></b></span></button></a>
+                    <a href="https://www.englishbaby.com/" class="b1" target="_blank"><button><img src="education/i20.jpeg"   class="p1"id="c39"><br><span><b></b></span></button></a>
+                    <a href="https://www.evsgogreen.com/" class="b1" target="_blank"><button><img src="education/evsgogreen.jpg"   class="p1"id="c40"><br><span><b></b></span></button></a>
+                    <a href="https://www.ed.gov/" class="b1" target="_blank"><button><img src="education/ed.jpg"   class="p1"id="c62"><br><span><b></b></span></button></a>
+                    <a href=https://new.edmodo.com/"" class="b1" target="_blank"><button><img src="education/edmodo.jpg"   class="p1"id="c64"><br><span><b>Edmodo</b></span></button></a>
+                    <a href="http://www.eba.gov.tr/#/anasayfa" class="b1" target="_blank"><button><img src="education/eba.png"   class="p1"id="c79"><br><span><b></b></span></button></a>
+                    <a href="https://www.edgenuity.com/" class="b1" target="_blank"><button><img src="education/edg.jpg"   class="p1"id="c80"><br><span><b></b></span></button></a>
+                    
+                    <!--F box is here-->
+                    <a href="https://diksha.gov.in/" class="b1" target="_blank"><button><img src="education/diksha.jpeg"   class="p1"id="c7"><br><span><b>Diksha</b></span></button></a>
+                    
+                    <!--G box is here-->
+                    <a href="https://www.goodreads.com/" class="b1" target="_blank"><button><img src="education/goodreads.jpeg"   class="p1"id="c8"><br><span><b>GoodReads</b></span></button></a>
+                    <a href="https://www.grammarly.com/" class="b1" target="_blank"><button><img src="education/grammarly.png"   class="p1"id="c58"><br><span><b>Grammarly</b></span></button></a>
+                    <a href="https://www.getepic.com/" class="b1" target="_blank"><button><img src="education/get.png"   class="p1"id="c74"><br><span><b>Get Epic</b></span></button></a>
+                    
+                    <!--H box is here-->
+                    <a href=" https://www.howcast.com/" class="b1" target="_blank"><button><img src="education/howcast.jpeg"   class="p1"id="c9"><br><span><b>HowCast</b></span></button></a>
+                    
+                    <!--I box is here-->
+                    <a href="http://www.indiaresults.com/" class="b1" target="_blank"><button><img src="education/india.jpg"   class="p1"id="c77"><br><span><b></b></span></button></a>
+                    <a href=" https://www.italki.com/" class="b1" target="_blank"><button><img src="education/i21.jpeg"   class="p1"id="c40"><br><span><b></b></span></button></a>
+                    <a href=" https://www.indiabix.com/" class="b1" target="_blank"><button><img src="education/indiabix.jpeg"   class="p1"id="c42"><br><span><b>Indiabix</b></span></button></a>
+                    <a href="https://www.infinitecourses.com/" class="b1" target="_blank"><button><img src="education/infinitecourses-com-squarelogo-1473160603103.png"   class="p1"id="c43"><br><span><b>Infinite<br>courses</b></span></button></a>
+                    <a href="https://www.instructure.com/" class="b1" target="_blank"><button><img src="education/ins.png"   class="p1"id="c51"><br><span><b>Instructure</b></span></button></a>
+                    <a href="https://in.ixl.com/" class="b1" target="_blank"><button><img src="education/ixl.png"   class="p1"id="c71"><br><span><b></b></span></button></a>
+                    
+                    <!--J box is here-->
+                    <a href="https://www.jagranjosh.com/" class="b1" target="_blank"><button><img src="education/josh-logo_icon_w.jpg"   class="p1"id="c46"><br><span><b>Jagran<br>Josh</b></span></button></a>
+                    
+                    <!--k box is here-->
+                    <a href="https://www.khanacademy.org/" class="b1" target="_blank"><button><img src="education/khanacademy.jpeg"   class="p1"id="c11"><br><span><b>Khan <br>Academy</b></span></button></a>
+                    <a href="https://www.kindiedays.com/" class="b1" target="_blank"><button><img src="education/kindiedays.jpeg"   class="p1"id="c43"><br><span><b>Kindiedays</b></span></button></a>
+                    
+                    <!--L box is here-->
+                    <a href="https://www.learnyst.com/" class="b1" target="_blank"><button><img src="education/learnyst.jpeg"   class="p1"id="c44"><br><span><b>Learnyst</b></span></button></a>
+                    <a href=" https://listography.com/" class="b1" target="_blank"><button><img src="education/i5.jpeg"   class="p1"id="c24"><br><span><b></b></span></button></a>
+                    <a href=" https://www.librarything.com/" class="b1" target="_blank"><button><img src="education/librarything.jpeg"   class="p1"id="c12"><br><span><b>Library <br>Thing</b></span></button></a>
+                    <a href=" https://www.linkedin.com/learning/" class="b1" target="_blank"><button><img src="education/i14.jpeg"   class="p1"id="c33"><br><span><b></b></span></button></a>
+                    
+                    <!--M box is here-->
+                    <a href=" https://www.meritnation.com/" class="b1" target="_blank"><button><img src="education/mertination.jpeg"   class="p1"id="c46"><br><span><b>Mertination</b></span></button></a>
+                    <a href=" https://mcceducom.org/" class="b1" target="_blank"><button><img src="education/mcceducom.jpeg"   class="p1"id="c45"><br><span><b>Mcceducom</b></span></button></a>
+                    <a href=" https://ocw.mit.edu/" class="b1" target="_blank"><button><img src="education/i12.jpeg"   class="p1"id="c31"><br><span><b></b></span></button></a>
+                    <a href="https://www.mentormob.com/" class="b1" target="_blank"><button><img src="education/mentormob.png"   class="p1"id="c44"><br><span><b>Mentormob</b></span></button></a>
+                    <a href="https://www.memrise.com/" class="b1" target="_blank"><button><img src="education/memrise.png"   class="p1"id="c45"><br><span><b></b></span></button></a>
+                    <a href="https://www.mheducation.co.in/" class="b1" target="_blank"><button><img src="education/mc.png"   class="p1"id="c60"><br><span><b></b></span></button></a>
+                    
+                    <!--N box is here-->
+                    
+                    <!--O box is here-->
+                    <a href="https://www.open.edu/openlearn/" class="b1" target="_blank"><button><img src="education/i16.jpeg"   class="p1"id="c35"><br><span><b></b></span></button></a>
+                    
+                    <!--P box is here-->
+                    <a href="https://www.pdfdrive.com/" class="b1" target="_blank"><button><img src="education/pdf.jpg"   class="p1"id="c61"><br><span><b></b></span></button></a>
+                    <a href="https://www.pearson.com/" class="b1" target="_blank"><button><img src="education/ps.png"   class="p1"id="c70"><br><span><b></b></span></button></a>
+                    
+                    <!--Q box is here-->
+                    <a href="https://quizlet.com/" class="b1" target="_blank"><button><img src="education/quizlet.gif"   class="p1"id="c55"><br><span><b></b></span></button></a>
+                    <a href="https://www.quora.com/" class="b1" target="_blank"><button><img src="education/quoura.jpeg"   class="p1"id="c13"><br><span><b>Quora</b></span></button></a>
+                    <a href="" class="b1" target="_blank"><button><img src="education/quizizz.png"   class="p1"id="c57"><br><span><b>Quizizz</b></span></button></a>
+                    
+                    <!--R box is here-->
+                    
+                    <!--S box is here-->
+                    <a href="https://study.com/" class="b1" target="_blank"><button><img src="education/stydy.jpg"   class="p1"id="c78"><br><span><b></b></span></button></a>
+                    <a href=" https://www.shiksha.com/" class="b1" target="_blank"><button><img src="education/shiksha.jpeg"   class="p1"id="c48"><br><span><b>Shiksha</b></span></button></a>
+                    <a href=" https://www.sarkariresult.com/" class="b1" target="_blank"><button><img src="education/sarkari-result.jpeg"   class="p1"id="c47"><br><span><b>Sarakari<br>Result</b></span></button></a>
+                    <a href="http://www.studivz.net/Default" class="b1" target="_blank"><button><img src="education/i2.jpeg"   class="p1"id="c21"><br><span><b></b></span></button></a>
+                    <a href=" https://www.schooltube.com/" class="b1" target="_blank"><button><img src="education/schooltube.jpeg"   class="p1"id="c15"><br><span><b>School <br>Tube</b></span></button></a>
+                    <a href="https://www.skillshare.com/" class="b1" target="_blank"><button><img src="education/skillshjare.jpeg"   class="p1"id="c16"><br><span><b>SkillShare</b></span></button></a>
+                    <a href=" https://www.sitepoint.com/" class="b1" target="_blank"><button><img src="education/i17.jpeg"   class="p1"id="c36"><br><span><b></b></span></button></a>
+                    <a href="https://www.skoob.com.br/" class="b1" target="_blank"><button><img src="education/i19.jpeg"   class="p1"id="c38"><br><span><b></b></span></button></a>
+                    <a href="https://www.scribd.com/" class="b1" target="_blank"><button><img src="education/scribd.jpg"   class="p1"id="c56"><br><span><b>Scribd</b></span></button></a>
+                    <a href="https://www.schoology.com/" class="b1" target="_blank"><button><img src="education/schoology.png"   class="p1"id="c66"><br><span><b>Schoology</b></span></button></a>
+                    
+                    <!--T box is here-->
+                    <a href="https://www.teachertube.com/" class="b1" target="_blank"><button><img src="education/teachertube.jpeg"   class="p1"id="c17"><br><span><b>Teacher <br>Tube</b></span></button></a>
+                    <a href=" https://www.twoo.com/" class="b1" target="_blank"><button><img src="education/i7.jpeg"   class="p1"id="c26"><br><span><b></b></span></button></a>
+                    <a href="https://www.teacherspayteachers.com/" class="b1" target="_blank"><button><img src="education/tpt.png"   class="p1"id="c69"><br><span><b></b></span></button></a>
+            
+                    <!--U box is here-->
+                    <a href=" https://unacademy.com/" class="b1" target="_blank"><button><img src="education/i1.jpeg"   class="p1"id="c20"><br><span><b></b></span></button></a>
+                    <a href=" https://www.udemy.com/" class="b1" target="_blank"><button><img src="education/i15.jpeg"   class="p1"id="c34"><br><span><b></b></span></button></a>
+                    <a href="https://www.udacity.com/" class="b1" target="_blank"><button><img src="education/i13.jpeg"   class="p1"id="c32"><br><span><b></b></span></button></a>
+                    <a href="https://www.unam.mx/" class="b1" target="_blank"><button><img src="education/unam.png"   class="p1"id="c75"><br><span><b>Unam</b></span></button></a>
+                    
+                    <!--V box is here-->
+                    <a href="https://www.vocareum.com/" class="b1" target="_blank"><button><img src="education/LogoImageWHITEBG.png"   class="p1"id="c42"><br><span><b>Vocareum</b></span></button></a>
+                    
+                    <!--W box is here-->
+                    <a href=" https://www.wikihow.com/Main-Page" class="b1" target="_blank"><button><img src="education/i18.jpeg"   class="p1"id="c37"><br><span><b></b></span></button></a>
+                    <a href=" https://www.wattpad.com/" class="b1" target="_blank"><button><img src="education/wattpad.jpeg"   class="p1"id="c18"><br><span><b>WattPad</b></span></button></a>
+                    <a href=" https://www.wonderhowto.com/" class="b1" target="_blank"><button><img src="education/wonderhow2.jpeg"   class="p1"id="c19"><br><span><b>Wonder <br>HowTo</b></span></button></a>
+                    <a href="https://wizklub.com/coding/" class="b1" target="_blank"><button><img src="education/wizklub.jpg"   class="p1"id="c39"><br><span><b></b></span></button></a>
+                    
+                    <!-- X box is here -->
+                    <a href="https://www.xing.com/en" class="b1" target="_blank"><button><img src="education/xing.png"   class="p1"id="c68"><br><span><b>Xing</b></span></button></a>
+                    
+                    <!--Y box is here -->
+                    <a href="https://www.youngbuzz.com/" class="b1" target="_blank"><button><img src="education/images.png"   class="p1"id="c48"><br><span><b></b></span></button></a>
+                                        
+
+                    
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c81"><br><span><b></b></span></button></a>-->
+
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c82"><br><span><b></b></span></button></a>-->
+
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c83"><br><span><b></b></span></button></a>-->
+
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c84"><br><span><b></b></span></button></a>-->
+
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c85"><br><span><b></b></span></button></a>-->
+
+<!--<a href="" class="b1" target="_blank"><button><img src=""   class="p1"id="c86"><br><span><b></b></span></button></a>-->
+
+        </div>
+    </div>
+    
+</body>
+</html>
